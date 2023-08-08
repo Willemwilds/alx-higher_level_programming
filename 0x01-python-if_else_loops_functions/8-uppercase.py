@@ -7,4 +7,4 @@ def uppercase(str):
         else:
             letter = chr(ord(letter))
         print("{}".format(letter), end="")
-    print("\n")
+    print()
