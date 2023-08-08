@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 def islower(c):
-    if not c.isidentifier():
-        if c.islower():
-            return True
-        else:
-            return False
+    if ord(c) == 65 and ord(c) < 123:
+        return True
+    else:
+        return False
