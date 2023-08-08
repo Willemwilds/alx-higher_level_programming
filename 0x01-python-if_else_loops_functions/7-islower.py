@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def islower(c):
-    if c.isalpha():
+    if not c.isidentifier():
         if c.islower():
             return True
         else:
