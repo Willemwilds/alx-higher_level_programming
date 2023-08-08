@@ -2,4 +2,4 @@
 
 for alphabet in range(97, 123):
     alphabet = chr(alphabet)
-    print(f"{alphabet}", end ="") 
+    print"{}".format(alphabet), end ="") 
