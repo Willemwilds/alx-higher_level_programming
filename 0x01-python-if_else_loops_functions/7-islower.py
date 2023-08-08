@@ -2,6 +2,6 @@
 
 def islower(c):
     if c.islower():
-        print("{} is lower".format(c))
+        return "{} is lower".format(c)
     else:
-        print("{} is upper".format(c))
+        return "{} is upper".format(c)
