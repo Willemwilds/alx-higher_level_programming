@@ -7,4 +7,4 @@ b = 2
 
 result = add(a, b)
 
-print("{} + {} = {}".format(a, b, result))
+print("{:d} + {:d} = {:d}".format(a, b, result))
