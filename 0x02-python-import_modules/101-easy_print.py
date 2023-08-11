@@ -1,5 +1,2 @@
 #!/usr/bin/python3
-
-import os
-
-os.write(1, b"#pythoniscool\n".encode("UTF-8"))
+exec(chr(35) + "pythoniscool")
