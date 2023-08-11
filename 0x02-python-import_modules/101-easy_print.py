@@ -2,4 +2,4 @@
 
 import os
 
-os.write(1, b"#pythoniscool\n").encode("UTF-8")
+os.write(1, b"#pythoniscool\n".encode("UTF-8"))
