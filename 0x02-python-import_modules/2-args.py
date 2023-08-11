@@ -3,15 +3,16 @@
 if __name__ == "__main__":
 
     import sys
+    import os
 
     argument = sys.argv
     length = len(argument) - 1
 
     if length < 1:
-        print("{} arguments.".format(length))
+        print("{:d} arguments.".format(length))
     elif length == 1:
-        print("{} argument:\n{}: {}".format(length, length, argument[1]))
+        print("{:d} argument:\n{}: {}".format(length, length, argument[1]))
     else:
-        print("{} arguments:".format(length))
-        for i in argument:
-            print("{}: {}".format(argument[i], i))
+        print("{:d} arguments:".format(length))
+        for i in argument[1:]:
+            print("{:d}: {}".format(argument.index(i), i))
