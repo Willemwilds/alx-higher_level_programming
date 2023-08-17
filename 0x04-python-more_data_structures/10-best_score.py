@@ -5,5 +5,3 @@ def best_score(a_dictionary):
     for key in a_dictionary:
         if a_dictionary[key] == largest:
             return key
-        else:
-            return None
