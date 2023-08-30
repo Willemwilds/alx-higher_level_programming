@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 
+"""
+    This module creates Square class.
+"""
+
+
 class Square:
+    """
+        The class instantiates the __size attribute and
+        defines the area method.
+    """
+
     def __init__(self, size=0):
         self.__size = size
 
