@@ -80,3 +80,11 @@ class Rectangle:
         """Deletes instances"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+if __name__ == "__main__":
+    r1 = Rectangle(3, 4)
+    print(r1)
+    r2 = Rectangle(1, 1)
+    print(r2)
+    del r1
+    del r2
