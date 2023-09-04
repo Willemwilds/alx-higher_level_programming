@@ -96,4 +96,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Defines a class method"""
-        return cls(size, size)
+        return Rectangle(size, size)
