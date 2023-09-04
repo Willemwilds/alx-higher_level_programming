@@ -17,10 +17,9 @@ class Rectangle:
             TypeError: error if non integer is passed
             ValueError: error if value less tjan zero.
         """
-        self.__width = 0
-        self.__height = 0
-        self.width = width
-        self.height = height
+
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
