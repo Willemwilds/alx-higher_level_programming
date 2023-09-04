@@ -9,7 +9,14 @@ class Rectangle:
     """ Initialises width and height of Rectangle"""
 
     def __init__(self, width=0, height=0):
-        """ Initialises width and height"""
+        """ Initialises width and height
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+        Raises:
+            TypeError: error if non integer is passed
+            ValueError: error if value less tjan zero.
+        """
         self.__width = width
         self.__height = height
 
