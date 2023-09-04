@@ -67,10 +67,8 @@ class Rectangle:
         """returns string"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        rectangle_str = ""
-        for _ in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str[:-1]
+        else:
+            return "\n".join([str(self.print_symbol) * self.width] * self.height)
 
     def __repr__(self):
         """returns string"""
@@ -80,11 +78,3 @@ class Rectangle:
         """Deletes instances"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-if __name__ == "__main__":
-    r1 = Rectangle(3, 4)
-    print(r1)
-    r2 = Rectangle(1, 1)
-    print(r2)
-    del r1
-    del r2
