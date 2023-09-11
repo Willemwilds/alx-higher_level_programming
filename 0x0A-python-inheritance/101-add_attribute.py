@@ -9,7 +9,6 @@ def add_new_attribute(obj, name, value):
     This function adds new attribute to an object.
     """
 
-    if hasattr(obj, '__dict__'):
-        setattr(obj, name, value)
-    else:
+    if not hasattr(obj, '__dict__'):
         raise TypeError("can't add new attribute")
+    setattr(obj, name, value)
