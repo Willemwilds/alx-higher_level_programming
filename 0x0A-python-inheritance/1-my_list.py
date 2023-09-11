@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """
 This module creates a MyList class that inherits from list
 """
