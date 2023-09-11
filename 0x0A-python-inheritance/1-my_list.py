@@ -14,8 +14,4 @@ class MyList:
         This function prints the list in ascending order.
         """
 
-        sorted_list = sorted(self)
-
-        for item in sorted_list:
-            print(item, end=' ')
-        print()
+        print(sorted(self))

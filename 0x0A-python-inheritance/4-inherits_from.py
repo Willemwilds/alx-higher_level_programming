@@ -7,8 +7,8 @@ subclass of another class.
 
 def inherits_from(obj, a_class):
     """
-    Returns True if obj is a subclass of a_class, otherwise 
+    Returns True if obj is a subclass of a_class, otherwise
     false.
     """
 
-    return issubclass(type(obj), a_class)
+    return type(obj) != a_class and isinstance(obj, a_class)
