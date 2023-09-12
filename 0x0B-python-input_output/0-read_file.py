@@ -9,6 +9,6 @@ def read_file(filename=""):
     This function prints the content of the file  into
     standard output.
     """
-    
+
     with open(filename) as f:
-        print(f.read(), end=" ")
+        print(f.read(), end='')
