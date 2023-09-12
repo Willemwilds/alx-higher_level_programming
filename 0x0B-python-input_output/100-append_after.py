@@ -9,10 +9,11 @@ def append_after(filename="", search_string="", new_string=""):
     This function inserts a line of text to a file.
     """
 
+    str = ""
     with open(filename) as file:
         for line in file:
-            text += line
+            str += line
             if search_string in line:
-                text += new_string
+                str += new_string
     with open(filename, "w") as file_2:
-        file_2.write(text)
+        file_2.write(str)
