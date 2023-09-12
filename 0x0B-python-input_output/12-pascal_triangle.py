@@ -5,9 +5,12 @@ This module defines pascal_triangle(n) function.
 
 
 def pascal_triangle(n):
+    """
+    This function returns the Pascal triangle.
+    """
     if n <= 0:
         return []
-    
+
     triangles = [[1]]
     while len(triangles) != n:
         tri = triangles[-1]
