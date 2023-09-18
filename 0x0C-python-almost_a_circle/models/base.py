@@ -1,60 +1,60 @@
 #!/usr/bin/python3
 """
-This module creates the Baee class
+This module defines the Base class which other modules inherit from.
 """
 import json
 
 
 class Base:
     """
-    The class defines objects ids.
+    This class is the class in which the triangle class inherits from
     """
-
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        This function initializes the class attributes
+        """
         if id is not None:
             self.id = id
         else:
-            __nb_objects += 1
-            self.id = __nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        A static method that converts dictionaries to json
+        This function converts the list dictionaries to json string
         """
-
-        if list_dictionaries is None or list_dictionaries == []:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        return json.dumps(list_dictionaries)
+        else:
+            return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """
-        Saves the class instances to a file
+        This function receives a lists of object and save them to a file
         """
-
         if list_objs is None:
             list_objs = []
 
-    file_name = cls.__name__ + ".json"
+        file_name = cls.__name__ + ".json"
 
-    with open(filename, "w") as file:
-        obj_list = [obj.to_dictionary() for obj in list_objs]
-        json_str = cls.to_json_string(obj_list)
-        file.write(json_str)
+        with open(file_name, mode='w', encoding='utf-8') as file:
+            obj_list = [obj.to_dictionary() for obj in list_objs]
+            json_str = cls.to_json_string(obj_list)
+            file.write(json_str)
 
     @classmethod
     def create(cls, **dictionary):
         """
-        The class method creates a dummy instance
+        This function creates a dummy instances of a class
         """
-
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         elif cls.__name__ == "Square":
-            dunmmy = cls(1)
+            dummy = cls(1)
         else:
             return None
 
@@ -63,10 +63,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """
-        The class method loads class instances from file
-        """
-
+        """Load instances from a JSON file and return a list of instances."""
         file_name = cls.__name__ + ".json"
         instance_list = []
 
@@ -80,6 +77,6 @@ class Base:
                     instance_list.append(instance)
 
         except FileNotFoundError:
-            pass
+            pass  # If the file doesn't exist, return an empty list
 
         return instance_list
